@@ -1,0 +1,143 @@
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px 50px;
+}
+h1{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    color: red;
+    text-align: center;
+}
+h2{
+    color: blue;
+}
+h3{
+    color: green;
+    font-size: 2em;
+}
+img{
+   max-height: 500px;
+    max-width: 700px;
+    min-height: 300px;
+    min-height: 500px;
+    margin: 30px 20px;
+}
+.dogDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.catDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+#compteur{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    
+}
+#compteur .gifVs{
+
+    height: 100px;
+    width: 400px;
+    min-height: 20px;
+    min-height: 20px
+}
+#scoreDog{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+#scoreCat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+p{
+    color: darkblue;
+    font-size: 2em;
+}
+#resultat{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    color: coral;
+    font-size: 3em;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+button {
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	font-size: 20px;
+	font-family: 'Staatliches', cursive;
+	letter-spacing: 5px;
+	background: #ffc421;
+	border: 2px solid black;
+	box-shadow: 0px 0px 0px rgba(0,0,0,0.4);
+	transition: 500ms;
+}
+
+button:after {
+	content: '';
+	position: absolute;
+	transform: translateX(-55px) translateY(-40px);
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: transparent;
+	box-shadow: 0px 0px 50px transparent;
+	transition: 500ms;
+}
+
+button:hover {
+	transform: translateY(-5px);
+	box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+}
+
+button:hover:after {
+	background: white;
+	box-shadow: 0px 0px 20px #ffc421, 0px 0px 30px #ffc421, inset 0px 0px 10px #ffc421;
+	animation: spin 1s infinite linear;
+}
+
+@keyframes spin{
+	25%{transform: translateX(-25px) translateY(-35px);
+			width: 15px;
+			height: 15px;}
+	50% {transform: translateX(-55px) translateY(-30px);
+			width: 5px;
+			height: 5px;}
+	75% {transform: translateX(-85px) translateY(-35px);
+			width: 15px;
+			height: 15px;}
+}
+
+button:focus {
+	outline: none;
+}
