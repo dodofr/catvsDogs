@@ -12,7 +12,16 @@ document.addEventListener("DOMContentLoaded", (event) => {                // per
   let scoreCat = document.getElementById("scoreCat");
   let resultat = document.getElementById("resultat");
 
+ // partie son
  
+ let muter = document.getElementById("muter");
+ muter.addEventListener("click", () => {
+  soundCat.unload()
+  soundDog.unload()
+})
+
+
+
   var soundCat = new Howl({                                               // utilisation de la librairie https://howlerjs.com/
     src: ["chat.mp3"],
   });                                                                      // permet de faire un son et de l'arreter une fois qu'il a fini
