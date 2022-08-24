@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", (event) => {                // per
       catDuVersus.innerHTML = "";
     } else {
       
-      setTimeout(dogGauche, 2000); // refresh quand on clique sur eliminer avec un setTimeout de 2s pour permettre le bruit
+      setTimeout(dogGauche, 1000); // refresh quand on clique sur eliminer avec un setTimeout de 2s pour permettre le bruit
      
       soundDog.play();  // bruit du chien
       scoreDog.innerHTML = compteurDog + " Dog éliminés";  // affiche le nombre de chiens eliminés
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", (event) => {                // per
       catDuVersus.innerHTML = "";
     } else {
       // monTime = setTimeout(catDroite, 2000); // refresh quand on clique sur eliminer
-      setTimeout(catDroite, 2000);
+      setTimeout(catDroite, 1000);
       scoreCat.innerHTML = compteurCat + " Cat éliminés";
       soundCat.play();
     }
