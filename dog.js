@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", (event) => {
   let dogImgGauche = document.getElementById("dogImgGauche");
   let dogNomGauche = document.getElementById("dogNomGauche");
@@ -11,11 +12,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   let scoreCat = document.getElementById("scoreCat");
   let resultat = document.getElementById("resultat");
 
-  // function bruit() {
-  //   let bruit = new Audio();
-  //   bruit.src = "chien.mp4";
-  //   bruit.play();
-  // }
+ 
   var soundCat = new Howl({
     src: ["chat.mp3"],
   });
