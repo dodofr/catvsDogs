@@ -15,12 +15,10 @@ document.addEventListener("DOMContentLoaded", (event) => {                // per
  // partie son
  
  let muter = document.getElementById("muter");
- muter.addEventListener("click", () => {
-  soundCat.unload()
+ muter.addEventListener("click", () => {              // tue le son
+  soundCat.unload()                       
   soundDog.unload()
 })
-
-
 
   var soundCat = new Howl({                                               // utilisation de la librairie https://howlerjs.com/
     src: ["chat.mp3"],
@@ -28,6 +26,18 @@ document.addEventListener("DOMContentLoaded", (event) => {                // per
   var soundDog = new Howl({
     src: ["dog.mp3"],
   });
+
+//selecteur h1
+
+let titreUn = document.getElementById("titreUn")
+
+// supprimer la div 
+
+let catdiv = document.getElementById("catDiv")
+let dogdiv = document.getElementById("dogDiv")
+
+
+
 
   function getRandomInt(max) {
     // fonction random bien pratique
@@ -44,10 +54,14 @@ document.addEventListener("DOMContentLoaded", (event) => {                // per
       gif.src = `${tabCatGif[getRandomInt(50)]}`;                  // met un source random depuis l'api gif 
       gif.style.width = "700px";                                   // modifie la taille du gif 
       gif.style.height = "500px";
-
-      scoreDog.innerHTML = "LOOOOOOSER";                      
+      catdiv.remove();                                             // supprime les div pour faire plus beau
+      dogdiv.remove();
+      muter.remove()                                              // supprime le bouton mute
+      scoreDog.innerHTML = ""; 
+      scoreCat.innerHTML = ""                     
       dogDuVersus.innerHTML = "";                                 // clean pour permettre d'avoir plus de place pour le gif
       catDuVersus.innerHTML = "";
+      titreUn.innerHTML = "CATS CATS CATS CATS"
     } else {
       
       setTimeout(dogGauche, 1000); // refresh quand on clique sur eliminer avec un setTimeout de 2s pour permettre le bruit
@@ -90,8 +104,12 @@ document.addEventListener("DOMContentLoaded", (event) => {                // per
       gif.src = `${tabDogGif[getRandomInt(50)]}`;
       gif.style.width = "700px";
       gif.style.height = "500px";
-
-      scoreCat.innerHTML = "LOOOOOOSER";
+      catdiv.remove();
+      dogdiv.remove();
+      muter.remove()
+      scoreDog.innerHTML = "";
+      titreUn.innerHTML = "DOGS DOGS DOGS DOGS"
+      scoreCat.innerHTML = "";
       dogDuVersus.innerHTML = "";
       catDuVersus.innerHTML = "";
     } else {
