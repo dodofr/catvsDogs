@@ -1,3 +1,6 @@
+body{
+    font-family: 'Quicksand', sans-serif;
+background: #fff url(https://static.cnews.fr/sites/default/files/styles/image_750_422/public/boxe_629e58a6e739d_0.jpg?itok=cHdS-A7F) center center/cover no-repeat;}
 .grid{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -13,16 +16,17 @@ h2{
     color: blue;
 }
 h3{
-    color: green;
+    color: white;
     font-size: 2em;
 }
 img{
-   max-height: 500px;
-    max-width: 700px;
+   max-height: 400px;
+    max-width: 650px;
     min-height: 300px;
     min-height: 500px;
-    margin: 30px 20px;
+    margin: 30px 10px;
 }
+
 .dogDiv{
     display: flex;
     flex-direction: column;
@@ -62,6 +66,7 @@ img{
     align-items: center;
     grid-column: 1/2;
     grid-row: 3/4;
+    background-color: black;
 }
 #scoreCat{
     display: flex;
@@ -70,16 +75,17 @@ img{
     align-items: center;
     grid-column: 3/4;
     grid-row: 3/4;
+    background-color: black;
 }
 p{
-    color: darkblue;
+    color: green;
     font-size: 2em;
 }
 #resultat{
     grid-column: 2/3;
     grid-row: 3/4;
-    color: coral;
-    font-size: 3em;
+    color: red;
+    font-size: 2em;
     text-align: center;
 }
 #mute{
@@ -103,7 +109,7 @@ button {
 	height: 50px;
 	cursor: pointer;
 	font-size: 20px;
-	font-family: 'Staatliches', cursive;
+	font-family: 'Quicksand', cursive;
 	letter-spacing: 5px;
 	background: #ffc421;
 	border: 2px solid black;
